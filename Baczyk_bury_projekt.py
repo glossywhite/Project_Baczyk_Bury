@@ -22,3 +22,7 @@ if __name__ == '__main__':
         for line in params.readlines():
             data = line
             cat, words = line[:line.find('; ')], line[line.find('; ') + 2:].split(', ')
+            
+            dict_words = {}
+             for word in words:
+                w = word.split(':')
