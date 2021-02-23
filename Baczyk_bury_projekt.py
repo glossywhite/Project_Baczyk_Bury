@@ -33,3 +33,8 @@ if __name__ == '__main__':
         in_txt = input_text.read()
 
     in_txt_tokens_words = word_tokenize(in_txt)
+    
+    all_positive = 0
+    all_negative = 0
+    cat_occurence = {}
+    param_occurence = {}
