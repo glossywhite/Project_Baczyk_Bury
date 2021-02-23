@@ -13,3 +13,4 @@ ps = PorterStemmer()
 def process_word(word):
     word = ps.stem(word)
     word = word.lower()
+    word = word.strip()
