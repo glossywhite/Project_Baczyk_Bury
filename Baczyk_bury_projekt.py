@@ -38,3 +38,8 @@ if __name__ == '__main__':
     all_negative = 0
     cat_occurence = {}
     param_occurence = {}
+    for cat in categories.keys():
+        cat_occurence[cat] = 0
+        cat_positive = 0
+        cat_negative = 0
+        print(f'=== {cat.upper()} ===')
