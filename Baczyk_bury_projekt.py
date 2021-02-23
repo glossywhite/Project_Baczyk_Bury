@@ -9,3 +9,5 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 
 ps = PorterStemmer()
+
+def process_word(word):
