@@ -11,3 +11,4 @@ from nltk.stem import PorterStemmer
 ps = PorterStemmer()
 
 def process_word(word):
+    word = ps.stem(word)
