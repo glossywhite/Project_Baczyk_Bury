@@ -24,7 +24,12 @@ if __name__ == '__main__':
             cat, words = line[:line.find('; ')], line[line.find('; ') + 2:].split(', ')
             
             dict_words = {}
-             for word in words:
+            for word in words:
                 w = word.split(':')
                 dict_words[w[0]] = w[1].replace('\n', '')
             categories[cat] = dict_words
+            
+    with open('test_text_input.txt', 'r') as input_text:
+        in_txt = input_text.read()
+
+    in_txt_tokens_words = word_tokenize(in_txt)
