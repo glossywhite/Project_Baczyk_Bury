@@ -43,3 +43,6 @@ if __name__ == '__main__':
         cat_positive = 0
         cat_negative = 0
         print(f'=== {cat.upper()} ===')
+        for param in categories[cat].keys():
+            param_occurence[param] = 0
+            for token in in_txt_tokens_words:
