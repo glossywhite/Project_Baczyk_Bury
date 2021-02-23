@@ -19,3 +19,6 @@ def process_word(word):
 if __name__ == '__main__':
     categories = {}
     with open('categories_list_txt.txt', 'r') as params:
+        for line in params.readlines():
+            data = line
+            cat, words = line[:line.find('; ')], line[line.find('; ') + 2:].split(', ')
