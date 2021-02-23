@@ -46,3 +46,4 @@ if __name__ == '__main__':
         for param in categories[cat].keys():
             param_occurence[param] = 0
             for token in in_txt_tokens_words:
+                processed_word_params = process_word(param)
