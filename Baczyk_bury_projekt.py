@@ -48,3 +48,7 @@ if __name__ == '__main__':
             for token in in_txt_tokens_words:
                 processed_word_params = process_word(param)
                 processed_word_input = process_word(token)
+                if processed_word_params == processed_word_input:
+                    cat_occurence[cat] += 1
+                    param_occurence[param] += 1
+                    
