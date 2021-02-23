@@ -15,3 +15,7 @@ def process_word(word):
     word = word.lower()
     word = word.strip()
     return word
+
+if __name__ == '__main__':
+    categories = {}
+    with open('categories_list_txt.txt', 'r') as params:
