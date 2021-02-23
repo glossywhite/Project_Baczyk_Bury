@@ -26,3 +26,5 @@ if __name__ == '__main__':
             dict_words = {}
              for word in words:
                 w = word.split(':')
+                dict_words[w[0]] = w[1].replace('\n', '')
+            categories[cat] = dict_words
