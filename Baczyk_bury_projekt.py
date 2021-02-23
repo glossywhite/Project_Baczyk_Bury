@@ -51,4 +51,7 @@ if __name__ == '__main__':
                 if processed_word_params == processed_word_input:
                     cat_occurence[cat] += 1
                     param_occurence[param] += 1
+                    if categories[cat][param] == 'positive':
+                        all_positive += 1
+                        cat_positive += 1
                     
