@@ -54,4 +54,7 @@ if __name__ == '__main__':
                     if categories[cat][param] == 'positive':
                         all_positive += 1
                         cat_positive += 1
+                    else:
+                        all_negative += 1
+                        cat_negative += 1
                     
