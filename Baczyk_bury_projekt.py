@@ -58,8 +58,41 @@ if __name__ == '__main__':
                         all_negative += 1
                         cat_negative += 1
                         
-             print(f'"{param}" occurence: {param_occurence[param]}')
+            print(f'"{param}" occurence: {param_occurence[param]}')
              
         print(f' >> {cat.upper()} occurence: {cat_occurence[cat]}')
         print(f' >> {cat.upper()} positives: {cat_positive}, negatives: {cat_negative}')
-                    
+        
+        cat_pos_neg = cat_positive + cat_negative
+        if cat_positive != 0:
+            print(f' >> {cat_positive / cat_pos_neg * 100}% of positives')
+        if cat_negative != 0:
+            print(f' >> {cat_negative / cat_pos_neg * 100}% of negatives')
+        print('===============\n')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
