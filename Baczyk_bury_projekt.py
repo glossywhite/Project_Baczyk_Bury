@@ -80,6 +80,10 @@ if __name__ == '__main__':
     print('Mostly occuring:')
     for moc in most_occured_cat:
         print(f'{moc} occured {max} times')
+        
+    all_pos_neg = all_positive + all_negative
+    print(f'{all_positive / all_pos_neg * 100}% of positives')
+    print(f'{all_negative / all_pos_neg * 100}% of negatives')
 
 
 
