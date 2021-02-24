@@ -69,7 +69,17 @@ if __name__ == '__main__':
         if cat_negative != 0:
             print(f' >> {cat_negative / cat_pos_neg * 100}% of negatives')
         print('===============\n')
-
+        
+    print('\n\n')
+    print('=== FINAL RESULTS ===')
+    
+    numbers = [cat_occurence[cat] for cat in cat_occurence]
+    max = max(numbers)
+    most_occured = [cat for cat in cat_occurence if cat_occurence[cat] == max]
+    
+    print('Mostly occuring:')
+    for moc in most_occured_cat:
+        print(f'{moc} occured {max} times')
 
 
 
