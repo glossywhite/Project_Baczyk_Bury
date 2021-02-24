@@ -20,13 +20,16 @@ if __name__ == '__main__':
     categories = {}
     with open('categories_list_txt.txt', 'r') as params:
         for line in params.readlines():
-            data = line
-            cat, words = line[:line.find('; ')], line[line.find('; ') + 2:].split(', ')
+
+            cat = line[:line.find('; ')]
+            words = line[line.find('; ') + 2:]
+            words = words.split(', ')
             
             dict_words = {}
             for word in words:
                 w = word.split(':')
-                dict_words[w[0]] = w[1].replace('\n', '')
+                w[1] = w[1].replace('\n', '')
+                dict_words[w[0]] = w[1]
             categories[cat] = dict_words
             
     with open('test_text_input.txt', 'r') as input_text:
@@ -44,9 +47,10 @@ if __name__ == '__main__':
         cat_negative = 0
         print(f'=== {cat.upper()} ===')
         for param in categories[cat].keys():
+            
             param_occurence[param] = 0
+            processed_word_params = process_word(param)
             for token in in_txt_tokens_words:
-                processed_word_params = process_word(param)
                 processed_word_input = process_word(token)
                 if processed_word_params == processed_word_input:
                     cat_occurence[cat] += 1
@@ -75,7 +79,7 @@ if __name__ == '__main__':
     
     numbers = [cat_occurence[cat] for cat in cat_occurence]
     max = max(numbers)
-    most_occured = [cat for cat in cat_occurence if cat_occurence[cat] == max]
+    most_occured_cat = [cat for cat in cat_occurence if cat_occurence[cat] == max]
     
     print('Mostly occuring:')
     for moc in most_occured_cat:
